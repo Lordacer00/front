@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -124,7 +124,7 @@ export default function Signup() {
   };
 
   return (
-    <div>
+    <div className='signup-container'>
       <div>
         <h2>Regístrate</h2>
 

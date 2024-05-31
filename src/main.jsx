@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/home',
-    element: <ProtectedRoute element={<Home />} />,
+    element: <ProtectedRoute element={<Home/>}/>,
   },
   {
     path: '/error',

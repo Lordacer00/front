@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 const Home = () => {
   const handleClearLocalStorage = () => {
@@ -12,7 +13,19 @@ const Home = () => {
     window.location.replace('/login');
   };
 
-  return <button onClick={handleClearLocalStorage}>Salir</button>;
+  return (  
+    <div className="home-container">
+      <h1>Bienvenido <span>{localStorage.getItem("username")}</span></h1>
+      <br />
+      <h2>Te registraste con el correo {localStorage.getItem("email")}</h2>
+      <div className="stats">
+        <h3>Estadísticas del Juego</h3>
+        <p>Puntaje: <span id="score">0</span></p>
+        <p>Retroalimentación: <span id="feedback">N/A</span></p>
+      </div>
+      <button onClick={handleClearLocalStorage} className="logout-button">Cerrar sesión</button>
+    </div>
+  );
 };
 
 export default Home;

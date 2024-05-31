@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ element }) => {
@@ -7,7 +7,7 @@ const ProtectedRoute = ({ element }) => {
   const jwt = localStorage.getItem('jwt');
 
   if (!email || !username || !jwt) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/Errorpage" />;
   }
 
   return element;
